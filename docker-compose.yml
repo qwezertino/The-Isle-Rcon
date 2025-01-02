@@ -6,5 +6,6 @@ services:
     ports:
       - 8105:8105
     volumes:
-      - ./app:/var/www/html  # Mount your app directory
+      - ./app:/var/www/html
+      - .env:/var/www/html/.env
     command: ["/bin/bash", "/var/www/html/start.sh"]  # Run start.sh on container start

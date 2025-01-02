@@ -38,7 +38,6 @@ RUN touch /usr/local/etc/php/conf.d/openswoole.ini && \
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
-# COPY --link /app/composer.json ./
 #/app/composer.lock
 
 # RUN /usr/bin/composer install
