@@ -1,0 +1,10 @@
+services:
+  swoole-php:
+    build:
+      context: .
+      dockerfile: ./.docker/images/php/Dockerfile
+    ports:
+      - 8105:8105
+    volumes:
+      - ./app:/var/www/html  # Mount your app directory
+    command: ["/bin/bash", "/var/www/html/start.sh"]  # Run start.sh on container start
